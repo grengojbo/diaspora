@@ -93,3 +93,28 @@ Also, be sure to join the official [mailing list](http://eepurl.com/Vebk).
 If you wish to contact us privately about any exploits in Diaspora you may
 find, you can email
 [exploits@joindiaspora.com](mailto:exploits@joindiaspora.com), [corresponding public key (keyID: 77485064)](http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0xCC6CAED977485064).
+
+## Установка
+от пользователя рут запустить команды
+
+        sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+
+устанавливаем
+
+        bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+        rvm pkg install zlib
+        rvm pkg install readline
+        rvm pkg install openssl
+
+        rvm install 1.9.2 --with-openssl-dir=$HOME/.rvm/usr
+        rvm --default use 1.9.2
+        gem install rails
+
+        git clone git://github.com/diaspora/diaspora.git
+        cd diaspora/
+
+        Do you wish to trust this .rvmrc file? (/home/jbo/tmp/diaspora/.rvmrc) y[es], n[o], v[iew], c[ancel]>
+введите **n**
+
+         git submodule update --init
+         bundle install --without development test
