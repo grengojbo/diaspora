@@ -1,4 +1,4 @@
-# Diaspora
+# Diaspora test
 [![Build Status](https://secure.travis-ci.org/diaspora/diaspora.png)](http://travis-ci.org/diaspora/diaspora)
 
 The privacy aware, personally controlled, do-it-all, open source social
