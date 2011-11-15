@@ -22,15 +22,20 @@ common: &common
   <<: *mysql
   #<<: *postgres
 
-
-development:
+# http://pullmonkey.com/2008/4/21/ruby-on-rails-multiple-database-connections/
+# Multiple database connections
+<% %w(development test production).each do |env| %>
+<%= env %>:
   <<: *common
-  database: diaspora_development
+  #adapter: mysql
+  database: diaspora_<%= env %>
 
-production:
-  <<: *common
-  database: diaspora_production
+#oracle_<%= env %>:
+#  <<: *dev_basics
+#  adapter: oracle
+#  database: diaspora_oracle_<%= env %>
+<% end %>
 
-test:
-  <<: *common
-  database: "diaspora_test<%= ENV['TEST_ENV_NUMBER'] %>"
+#test:
+#  <<: *common
+#  database: "diaspora_test<%= ENV['TEST_ENV_NUMBER'] %>"
