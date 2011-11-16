@@ -1,0 +1,183 @@
+!!!
+%html{:dir => "ltr", :lang => "ru"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title
+      Войти
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "/favicon.png", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    / Social Media Icons are by Paul Robert Lloyd @ http://paulrobertlloyd.com/2009/06/social_media_icons
+    / bootstrap/blueprint switch
+    %link{:href => "/stylesheets/blueprint/screen.css?1321260723", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/blueprint/print.css?1321260723", :media => "print", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/login.css?1321266411", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/application.css?1321266411", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/ui.css?1321266412", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/lightbox.css?1321266411", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/autocomplete.css?1321266411", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/tags.css?1321266412", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/hovercard.css?1321266411", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/vendor/facebox.css?1321260723", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/vendor/fileuploader.css?1321260723", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/vendor/autoSuggest.css?1321260723", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/interim-bootstrap.css?1321260723", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:content => "authenticity_token", :name => "csrf-param"}/
+    %meta{:content => "fHvYJ+py+uH6NyPrtzYQMlZOwaQ5bbddoOPRw/PiDjQ=", :name => "csrf-token"}/
+    /[if IE]
+      <script src="/javascripts/ie.js?1321260723" type="text/javascript"></script>
+    %script{:src => "/javascripts/vendor/jquery162.min.js?1321260723", :type => "text/javascript"}
+    :javascript
+      //
+        !window.jQuery && document.write(unescape('%3Cscript src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"%3E%3C/script%3E'))
+      //
+        %script{:src => "/javascripts/rails.validations.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/rails.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery.hotkeys.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery.autoresize.min.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery-ui-1.8.9.custom.min.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery.charcount.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery-debounce.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/jquery.expander.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/timeago.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/Mustache.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/facebox.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.infinitescroll-custom.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.autocomplete-custom.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/jquery.infieldlabel-custom.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/keycodes.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/fileuploader-custom.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/diaspora.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/aspects-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/contacts-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/featured-users-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/invitations-edit.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/invitations-new.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/mentions-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/multis-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/notifications-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/people-show.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/posts-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/posts-show.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/services-finder.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/tag-followings-index.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/tags-show.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/pages/users-getting-started.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/helpers/alert.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/helpers/i18n.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/aspect-navigation.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/back-to-top.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/comment-form.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/comment-stream.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/comment.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/direction-detector.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/flash-messages.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/header.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/hovercard.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/infinite-scroll.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/lightbox.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/likes.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/notifications-badge.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/notifications.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/search.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/stream-element.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/stream.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/timeago.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/widgets/user-dropdown.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/view.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/stream.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/content-updater.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/aspects-dropdown.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/contact-edit.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/contact-list.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/aspect-sorting.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/bootstrap/bootstrap-twipsy.js?1321260723", :type => "text/javascript"}
+    %script{:src => "/javascripts/vendor/bootstrap/bootstrap-popover.js?1321260723", :type => "text/javascript"}
+    :javascript
+      //
+        Diaspora.I18n.loadLocale({"confirm_dialog":"\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b? ","timeago":{"day":"\u0434\u0435\u043d\u044c","days":"%d \u0434\u043d\u0435\u0439[-\u044f]","hour":"\u043e\u043a\u043e\u043b\u043e \u0447\u0430\u0441\u0430","hours":"\u043e\u043a\u043e\u043b\u043e %d \u0447\u0430\u0441\u043e\u0432","minute":"\u043e\u043a\u043e\u043b\u043e \u043c\u0438\u043d\u0443\u0442\u044b","minutes":"%d \u043c\u0438\u043d\u0443\u0442[-\u044b]","month":"\u043e\u043a\u043e\u043b\u043e \u043c\u0435\u0441\u044f\u0446\u0430","months":"%d \u043c\u0435\u0441\u044f\u0446\u0430[-\u0435\u0432]","prefixAgo":"","prefixFromNow":"\u0447\u0435\u0440\u0435\u0437","seconds":"\u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0435\u043a\u0443\u043d\u0434","suffixAgo":"\u043d\u0430\u0437\u0430\u0434","suffixFromNow":"\u0441 \u044d\u0442\u043e\u0433\u043e \u043c\u043e\u043c\u0435\u043d\u0442\u0430","year":"\u043e\u043a\u043e\u043b\u043e \u0433\u043e\u0434\u0430","years":"%d \u043b\u0435\u0442"},"videos":{"unknown":"\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u044b\u0439 \u0432\u0438\u0434\u0435\u043e\u0444\u043e\u0440\u043c\u0430\u0442","watch":"\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u044d\u0442\u043e \u0432\u0438\u0434\u0435\u043e \u043d\u0430 {{provider}}"},"search_for":"\u0418\u0441\u043a\u0430\u0442\u044c {{name}}","publisher":{"at_least_one_aspect":"\u0412\u0430\u043c \u043d\u0430\u0434\u043e \u043c\u0438\u043d\u0438\u043c\u0443\u043c \u043e\u0434\u0438\u043d \u0430\u0441\u043f\u0435\u043a\u0442 \u0441\u043e\u0437\u0434\u0430\u0442\u044c","limited":"\u041e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u0430\u044f - \u0432\u0430\u0448\u0430 \u0437\u0430\u043f\u0438\u0441\u044c \u0431\u0443\u0434\u0435\u0442 \u0432\u0438\u0434\u043d\u0430 \u0442\u043e\u043b\u044c\u043a\u043e \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u044b\u043c \u0432\u0430\u043c\u0438 \u043b\u044e\u0434\u044f\u043c","public":"\u041f\u0443\u0431\u043b\u0438\u0447\u043d\u0430\u044f - \u0432\u0430\u0448\u0430 \u0437\u0430\u043f\u0438\u0441\u044c \u0431\u0443\u0434\u0435\u0442 \u0432\u0438\u0434\u043d\u0430 \u0432\u0441\u0435\u043c, \u0432\u043a\u043b\u044e\u0447\u0430\u044f \u043f\u043e\u0438\u0441\u043a\u043e\u0432\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b"},"infinite_scroll":{"no_more":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439 \u0431\u043e\u043b\u044c\u0448\u0435 \u043d\u0435\u0442."},"web_sockets":{"disconnected":"WebSocket \u0437\u0430\u043a\u0440\u044b\u0442; \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0431\u043e\u043b\u044c\u0448\u0435 \u043d\u0435 \u0431\u0443\u0434\u0443\u0442 \u0442\u0440\u0430\u043d\u0441\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0432 \u043f\u0440\u044f\u043c\u043e\u043c \u044d\u0444\u0438\u0440\u0435."},"aspect_dropdown":{"add_to_aspect":"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043a\u043e\u043d\u0442\u0430\u043a\u0442","all_aspects":"\u0412\u0441\u0435 \u0430\u0441\u043f\u0435\u043a\u0442\u044b","error":"\u041d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043d\u0430\u0447\u0430\u0442\u044c \u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0441 \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u043c {{name}}.  \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0432\u044b \u0435\u0433\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043b\u0438?","select_aspects":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0430\u0441\u043f\u0435\u043a\u0442\u044b","started_sharing_with":"\u0412\u044b \u043d\u0430\u0447\u0430\u043b\u0438 \u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0441 {{name}}!","stopped_sharing_with":"\u0412\u044b \u043f\u0435\u0440\u0435\u0441\u0442\u0430\u043b\u0438 \u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0441 {{name}}.","toggle":{"few":"\u0412 {{count}} \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u0445","many":"\u0412 {{count}} \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u0445","one":"\u0412 {{count}} \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u0445","other":"\u0412 {{count}} \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u0445","two":"\u0412 {{count}} \u0430\u0441\u043f\u0435\u043a\u0442\u0430\u0445","zero":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0430\u0441\u043f\u0435\u043a\u0442\u044b"}},"show_more":"\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0431\u043e\u043b\u044c\u0448\u0435","failed_to_like":"\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c!","failed_to_post_message":"\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435!","comments":{"hide":"\u0441\u043a\u0440\u044b\u0442\u044c \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438","show":"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0432\u0441\u0435 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438"},"reshares":{"duplicate":"\u041d\u0430\u0441\u0442\u043e\u043b\u044c\u043a\u043e \u043a\u0440\u0443\u0442\u043e, \u0434\u0430? \u0412\u044b \u0443\u0436\u0435 \u043f\u043e\u0434\u0435\u043b\u0438\u043b\u0438\u0441\u044c \u044d\u0442\u043e\u0439 \u0437\u0430\u043f\u0438\u0441\u044c\u044e!"},"aspect_navigation":{"deselect_all":"\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0432\u0441\u0435","no_aspects":"\u0410\u0441\u043f\u0435\u043a\u0442 \u043d\u0435 \u0432\u044b\u0431\u0440\u0430\u043d","select_all":"\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0432\u0441\u0435"},"getting_started":{"alright_ill_wait":"\u0425\u043e\u0440\u043e\u0448\u043e, \u044f \u043f\u043e\u0434\u043e\u0436\u0434\u0443.","hey":"\u041f\u0440\u0438\u0432\u0435\u0442, {{name}}!","no_tags":"\u0412\u044b \u043d\u0435 \u0441\u043b\u0435\u0434\u0438\u0442\u0435 \u043d\u0438 \u0437\u0430 \u043e\u0434\u043d\u043e\u0439 \u043c\u0435\u0442\u043a\u043e\u0439! \u0412\u0441\u0435 \u0440\u0430\u0432\u043d\u043e \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c?","preparing_your_stream":"\u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0432\u0430\u0448\u0435\u0433\u043e \u043b\u0438\u0447\u043d\u043e\u0433\u043e \u043f\u043e\u0442\u043e\u043a\u0430..."},"photo_uploader":{"looking_good":"\u0411\u043e\u0436\u0435 \u043c\u043e\u0439, \u0432\u044b \u0432\u044b\u0433\u043b\u044f\u0434\u0438\u0442\u0435 \u043f\u043e\u0442\u0440\u044f\u0441\u0430\u044e\u0449\u0435!"},"tags":{"wasnt_that_interesting":"OK, \u0432\u0438\u0434\u0438\u043c\u043e, \u0441\u043b\u0435\u0434\u0438\u0442\u044c \u0437\u0430 \u043c\u0435\u0442\u043a\u043e\u0439 #{{tagName}} \u0431\u044b\u043b\u043e \u043d\u0435 \u0442\u0430\u043a \u0443\u0436 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u043e..."}}, "ru");
+        Diaspora.Page = "SessionsNew";
+      //
+        %script{:src => "/javascripts/login.js?1321260723", :type => "text/javascript"}
+    :css
+      /**/
+        header, #flash_alert { display:none; }
+        footer{ position: absolute; bottom: 6px; }
+      /**/
+        :css
+      /**/
+        .translation_missing {
+          color: purple;
+          background-color: red;
+        }
+      /**/
+      %body
+    #flash_alert
+      .message
+        Срок вашего сеанса истёк, пожалуйста войдите в систему вновь.
+    %a#back-to-top{:href => "#", :title => "Back to top"}
+      ⇧
+    #notifications
+    %header.landing
+    .container{:style => "position:relative;"}
+      %a{:href => "/"}
+        %img.diaspora_header_logo{:alt => "Logo_large", :height => "32px", :src => "/images/logo_large.png?1321260723", :width => "321px"}/
+      .right
+        %ul#landing_nav
+          %li
+            %a{:href => "http://twitter.com/joindiaspora"} @joindiaspora
+          %li
+            %a{:href => "https://github.com/diaspora/diaspora"} github
+          %li
+            %a{:href => "http://blog.joindiaspora.com/"} блог
+          %li
+            %a.login{:href => "/users/sign_in"} логин
+    .container{:style => ""}
+      .span-24.last{:style => ""}
+        .container{:style => "text-align:center;"}
+          #login
+            %p
+              %img#asterisk.logo{:alt => "Asterisk", :height => "154", :src => "/images/asterisk.png?1321260723", :width => "154"}/
+            %p
+              %img#logo{:alt => "Logo_caps", :height => "14", :src => "/images/logo_caps.png?1321260723", :width => "98"}/
+            %p.login_alert Срок вашего сеанса истёк, пожалуйста войдите в систему вновь.
+            %form#user_new.user_new{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+              %div{:style => "margin:0;padding:0;display:inline"}
+                %input{:name => "utf8", :type => "hidden", :value => "&#x2713;"}/
+                %input{:name => "authenticity_token", :type => "hidden", :value => "fHvYJ+py+uH6NyPrtzYQMlZOwaQ5bbddoOPRw/PiDjQ="}/
+              %p
+                %label{:for => "user_username"} Имя пользователя
+                %input#user_username{:name => "user[username]", :size => "30", :tabindex => "1", :type => "text"}/
+              %br/
+              %p
+                %label{:for => "user_password"} Пароль
+                %input#user_password{:name => "user[password]", :size => "30", :tabindex => "2", :type => "password", :value => ""}/
+                %a#forgot_password_link{:href => "/users/password/new", :tabindex => "5"} Забыли пароль?
+              %br/
+              %p#controls
+                %span#remember_me
+                  %input{:name => "user[remember_me]", :type => "hidden", :value => "0"}/
+                  %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
+                  %label{:for => "user_remember_me"} Запомнить
+                %input#user_submit{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
+              %br/
+              %br/
+              %br/
+              %br/
+              %a{:href => "/users/sign_up"} Регистрация
+    %footer
+    .container
+      %ul#footer_nav
+        %li
+          %a{:href => "http://twitter.com/joindiaspora"} @joindiaspora
+        %li
+          %a{:href => "https://github.com/diaspora/diaspora"} github
+        %li
+          %a{:href => "http://blog.joindiaspora.com"} блог
+        %li
+          %a{:href => "http://f.ua:3000/source.tar.gz"} код
+        %li
+          %a{:href => "https://github.com/diaspora/diaspora/wiki/Changelog"} что нового?
+        %li
+      %img{:alt => "Powered_by_diaspora", :height => "11px", :src => "/images/powered_by_diaspora.png?1321260723", :width => "145px"}/
