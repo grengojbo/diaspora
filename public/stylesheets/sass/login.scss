@@ -29,11 +29,7 @@
 
     input[type='text'],
     input[type='password'] {
-      -webkit-box-shadow: 0 1px 0px white, 0 -1px 0px #888888;
-      -moz-box-shadow: 0 1px 0px white, 0 -1px 0px #888888;
-      box-shadow: 0 1px 0px white, 0 -1px 0px #888888;
-      width: 180px;
-      max-width: 180px;
+
     }
 
     p {
@@ -67,7 +63,7 @@
     #forgot_password_link {
       text-align: left;
       position: absolute;
-      left: 205px;
+      left: 215px;
       top: 12px;
       width: 150px;
       color: #aaa;
