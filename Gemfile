@@ -96,6 +96,7 @@ gem 'http_accept_language', :git => 'git://github.com/iain/http_accept_language.
 
 gem 'haml', '3.1.2'
 gem 'haml-rails'
+gem 'hpricot'
 gem 'mobile-fu'
 gem 'sass', '3.1.7'
 gem 'will_paginate', '3.0.pre2'
