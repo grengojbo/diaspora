@@ -23,6 +23,7 @@
     / bootstrap/blueprint switch
     - if @aspect == :getting_started || @page == :logged_out
       = stylesheet_link_tag "bootstrap.min.css"
+      -# =stylesheet_link_tag 'compass_bootstrap.css', :media => 'screen, projection'
     - else
       = stylesheet_link_tag "blueprint/screen", :media => 'screen'
       = stylesheet_link_tag "blueprint/print", :media => 'print'

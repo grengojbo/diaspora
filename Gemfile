@@ -6,6 +6,7 @@ gem 'bundler', '>= 1.0.0'
 gem 'foreman'
 
 gem 'thin', '1.2.11', :require => false
+gem 'unicorn'
 
 # authentication
 
@@ -94,10 +95,13 @@ gem 'http_accept_language', :git => 'git://github.com/iain/http_accept_language.
 # views
 
 gem 'haml', '3.1.2'
+gem 'haml-rails'
 gem 'mobile-fu'
 gem 'sass', '3.1.7'
 gem 'will_paginate', '3.0.pre2'
 gem 'client_side_validations'
+gem 'compass', '>= 0.11.5'
+gem 'compass-bootstrap'
 
 # web
 
