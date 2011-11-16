@@ -4,6 +4,9 @@
 
 set :config_yaml, YAML.load_file(File.dirname(__FILE__) + '/deploy_config.yml')
 
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
+require 'rvm/capistrano' # Для работы rvm
+
 require 'bundler/capistrano'
 set :bundle_dir, ''
 
@@ -11,16 +14,29 @@ set :stages, ['production', 'staging']
 set :default_stage, 'staging'
 require 'capistrano/ext/multistage'
 
+set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
+set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+
 set :application, 'diaspora'
 set :scm, :git
 set :use_sudo, false
 set :scm_verbose, true
 set :repository_cache, "remote_cache"
 set :deploy_via, :checkout
+#set :deploy_to, "/srv/#{application}"
+
+set :domain, "git@git.ndc-kvazar.com.ua" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
+#set :rails_env, "production"
+set :rvm_ruby_string, '1.9.2' # Это указание на то, какой Ruby интерпретатор мы будем использовать.
+set :rvm_type, :user # Указывает на то, что мы будем использовать rvm, установленный у пользователя, от которого происходит деплой, а не системный rvm.
 
 # Bonus! Colors are pretty!
 def red(str)
   "\e[31m#{str}\e[0m"
+end
+
+before_exec do |server|
+  ENV["BUNDLE_GEMFILE"] = "#{rails_root}/Gemfile"
 end
 
 # Figure out the name of the current local branch
@@ -33,6 +49,8 @@ end
 # Set the deploy branch to the current branch
 set :branch, current_git_branch
 
+# Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
+# В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
 namespace :deploy do
   task :symlink_config_files do
     run "ln -s -f #{shared_path}/config/database.yml #{current_path}/config/database.yml"
@@ -50,32 +68,37 @@ namespace :deploy do
   end
 
   task :restart do
-    thins = capture "svstat /service/thin*"
-    matches = thins.match(/(thin_\d+):/).captures
+    run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D; fi"
 
-    matches.each_with_index do |thin, index|
-      unless index == 0
-        puts "sleeping for 20 seconds"
-        sleep(20)
-      end
-      run "svc -t /service/#{thin}"
-    end
+    #thins = capture "svstat /service/thin*"
+    #matches = thins.match(/(thin_\d+):/).captures
+
+    #matches.each_with_index do |thin, index|
+    #  unless index == 0
+    #    puts "sleeping for 20 seconds"
+    #    sleep(20)
+    #  end
+    #  run "svc -t /service/#{thin}"
+    #end
 
     run "svc -t /service/resque_worker*"
   end
 
   task :kill do
-    run "svc -k /service/thin*"
+    run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+    #run "svc -k /service/thin*"
     run "svc -k /service/resque_worker*"
   end
 
   task :start do
-    run "svc -u /service/thin*"
+    run "bundle exec unicorn_rails -c #{unicorn_conf} -E #{rails_env} -D"
+    #run "svc -u /service/thin*"
     run "svc -u /service/resque_worker*"
   end
 
   task :stop do
-    run "svc -d /service/thin*"
+    run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+    #run "svc -d /service/thin*"
     run "svc -d /service/resque_worker*"
   end
 
