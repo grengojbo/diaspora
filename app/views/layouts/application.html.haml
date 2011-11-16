@@ -1,3 +1,4 @@
+
 -#   Copyright (c) 2010-2011, Diaspora Inc.  This file is
 -#   licensed under the Affero General Public License version 3 or later.  See
 -#   the COPYRIGHT file.
@@ -119,6 +120,7 @@
           %li= link_to t('.whats_new'), 'https://github.com/diaspora/diaspora/wiki/Changelog'
           %li= link_to(t('layouts.application.toggle'), toggle_mobile_path)  if is_mobile_device?
         = image_tag 'powered_by_diaspora.png', :height => "11px", :width => "145px"
+        %a{}
 
     -if !@landing_page && request.url.match(/joindiaspora.com/)
       :javascript
