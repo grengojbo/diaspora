@@ -95,7 +95,7 @@ Diaspora::Application.routes.draw do
     get 'invitations/email' => 'invitations#email', :as => 'invite_email'
   end
 
-  get 'login' => redirect('/users/sign_in')
+  get 'login' => redirect('/users/sign_in'), :as => 'sign_in'
 
   scope 'admins', :controller => :admins do
     match :user_search
