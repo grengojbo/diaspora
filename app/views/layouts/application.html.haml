@@ -20,14 +20,13 @@
     / Social Media Icons are by Paul Robert Lloyd @ http://paulrobertlloyd.com/2009/06/social_media_icons
 
     / bootstrap/blueprint switch
-    - if @aspect == :getting_started || @page == :logged_out
-      = stylesheet_link_tag "bootstrap.min.css"
-      -# =stylesheet_link_tag 'compass_bootstrap.css', :media => 'screen, projection'
+    - if @aspect == :getting_started || @page == :logged_out || @aspect == :login
+      -#= stylesheet_link_tag "bootstrap.min.css"
+      = stylesheet_link_tag 'compass_bootstrap.css', :media => 'screen, projection'
     - else
       = stylesheet_link_tag "blueprint/screen", :media => 'screen'
       = stylesheet_link_tag "blueprint/print", :media => 'print'
-
-    = stylesheet_link_tag "login", :media => 'screen'
+      = stylesheet_link_tag "login", :media => 'screen'
 
     = include_stylesheets :default, :media => 'all'
     - if rtl?
@@ -113,9 +112,8 @@
     %footer
       .container
         %ul#footer_nav
-          %li= link_to '@joindiaspora', "http://twitter.com/joindiaspora"
-          %li= link_to 'github', "https://github.com/diaspora/diaspora"
-          %li= link_to t('layouts.header.blog'), "http://blog.joindiaspora.com"
+          %li= link_to 'RSS', "#"
+          %li= link_to t('layouts.header.contact'), "/contact.html"
           %li= link_to t('layouts.header.code'), "#{root_url.chomp('/')}/source.tar.gz" unless request.url.match(/joindiaspora.com/)
           %li= link_to t('.whats_new'), 'https://github.com/diaspora/diaspora/wiki/Changelog'
           %li= link_to(t('layouts.application.toggle'), toggle_mobile_path)  if is_mobile_device?
