@@ -10,42 +10,42 @@ $button-border-color: #aaa
   :left -11px
 
 .button
-  @include border-radius(3px)
-  @include button-gradient($light-grey)
-  @include box-shadow(0,1px,1px,#cfcfcf)
-  @include transition(border)
+  //@include border-radius(3px)
+  //@include button-gradient($light-grey)
+  //@include box-shadow(0,1px,1px,#cfcfcf)
+  //@include transition(border)
 
-  :display inline
+  //:display inline
 
-  :font
-    :style normal
-    :size 12px
-  :color #505050
+  //:font
+  //  :style normal
+  //  :size 12px
+  //:color #505050
 
-  :padding 4px 9px
+  //:padding 4px 9px
 
-  :min-width 90px
-  :min-height 10px
+  //:min-width 90px
+  //:min-height 10px
 
-  :border 1px solid $button-border-color
+  //:border 1px solid $button-border-color
 
-  :cursor pointer
-  :white-space nowrap
+  //:cursor pointer
+  //:white-space nowrap
 
-  &:hover
-    @include button-gradient-hover-no-saturation($light-grey)
-    :color #505050
-    :text-decoration none
-    :border 1px solid darken($button-border-color,15%)
+  //&:hover
+  //  @include button-gradient-hover-no-saturation($light-grey)
+  //  :color #505050
+  //  :text-decoration none
+  //  :border 1px solid darken($button-border-color,15%)
 
-  &:active
-    @include linear-gradient(#acacac,#808080)
+  //&:active
+  //  @include linear-gradient(#acacac,#808080)
 
-  img
-    :position relative
-    :height 20px
-    :width 20px
-    :top 6px
+  //img
+  //  :position relative
+  //  :height 20px
+  //  :width 20px
+  //  :top 6px
 
 /* fix for input height */
 input.button

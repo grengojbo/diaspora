@@ -27,6 +27,153 @@
 @import "forms.scss";
 @import "tables.scss";
 @import "patterns.scss";
-#user_password {
+html {
+  /*background-color:#eee;*/
+}
+body {
+  /*background-color:#eee;*/
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);*/
+  color:#333;
+  height:100%;
+  //margin:0;
+  /*background-image: url(../images/bgfon03.jpg);*/
+}
 
+#user_submit, .btn {
+    @include btn;
+}
+#user_submit {
+  /*margin-right:20px;*/
+}
+.span-24.last .container {
+  width: 1100px;
+}
+.logo {
+  width:250px;
+  padding:5px;
+}
+.awsidebar {
+  width:560px;
+  clear:right;
+  float:left;
+  padding-top: 40px;
+}
+.awbody {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 0px;
+  /*height:100%;*/
+  /*width:100%;*/
+  border:solid 2px #222;
+  background-position: center center;
+  background-image: url(../images/bgfon03.jpg);
+  color:#eee;
+}
+.awsite {
+  width: 1100px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 0px;
+  min-height:300px;
+  /*width:100%;*/
+  /*border:solid 2px #222;*/
+  /*background-image: url(../images/bgfon03.jpg);*/
+}
+.awcont {
+  position: relative;
+  width:524px;
+  min-height:200px;
+  margin: 2px;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  float:left;
+  a {
+    color:orange;
+  }
+}
+.awform {
+  //margin-top: 18px;
+}
+.awstrok {
+  float:right;
+  margin-bottom:5px;
+}
+.awstrok.span6 {
+  label {
+    margin-right: 5px;
+    padding-top: 0px;
+    }
+  input {
+    float:none;
+    :focus {
+      border-color: rgba(200,200,200,.8);
+    }
+  }
+  span {
+    padding:5px;
+    margin-top: 5px;
+    /*float:left;*/
+    margin-right:20px;
+  }
+  a {
+
+  }
+}
+.soc {
+  margin-left:50px;
+  clear:both;
+  text-align: center;
+  font-size:16px;
+  float:right;
+  p {
+    margin-top:15px;
+    text-align: center;
+  }
+  img {
+    margin-left:5px;
+    margin-right:5px;
+    width:32px;
+  }
+}
+footer {
+  width: 100%;
+  left:0;
+  bottom: 0;
+  color: #999;
+
+  .container {
+    margin-top:4em;
+    padding:0;
+    padding-top:0.5em;
+    border-top:1px solid #ddd;
+    /*background-color:#666;*/
+  }
+  img {
+    position: relative;
+    top: 2px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    li {
+      display: inline;
+      margin-right: 1em;
+      last-child {
+        margin: 0;
+      }
+    }
+    a {
+      color: #777;
+    }
+  }
+}
+.awleft {
+  float:left;
+}
+.awright {
+  float:right;
 }

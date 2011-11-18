@@ -521,7 +521,7 @@ footer {
 }
 
 // Base .btn styles
-.btn {
+@mixin btn {
   // Button Base
   cursor: pointer;
   display: inline-block;

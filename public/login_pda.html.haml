@@ -6,19 +6,19 @@
       Войти
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "stylesheets/blueprint/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/blueprint/print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/login.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/application.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/ui.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/autocomplete.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/tags.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/hovercard.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/vendor/facebox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/vendor/fileuploader.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/vendor/autoSuggest.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "stylesheets/interim-bootstrap.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/blueprint/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/blueprint/print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}/
+    //%link{:href => "stylesheets/login.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/application.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    //%link{:href => "stylesheets/ui.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/autocomplete.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/tags.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/hovercard.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/vendor/facebox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/vendor/fileuploader.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/vendor/autoSuggest.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{:href => "stylesheets/interim-bootstrap.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "stylesheets/compass_bootstrap.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
     %meta{:content => "authenticity_token", :name => "csrf-param"}/
     %meta{:content => "fHvYJ+py+uH6NyPrtzYQMlZOwaQ5bbddoOPRw/PiDjQ=", :name => "csrf-token"}/
@@ -104,8 +104,6 @@
     #flash_alert
       .message
         Срок вашего сеанса истёк, пожалуйста войдите в систему вновь.
-    %a#back-to-top{:href => "#", :title => "Back to top"}
-      ⇧
     #notifications
     %header.landing
       .container{:style => "position:relative;"}
@@ -121,51 +119,55 @@
               %a{:href => "http://blog.joindiaspora.com/"} блог
             %li
               %a.login{:href => "users/sign_in"} логин
-    .container{:style => ""}
-      .span-24.last{:style => ""}
-        .container{:style => "text-align:center;"}
-          #login
-            %p
-              %img#asterisk.logo{:alt => "Asterisk", :height => "154", :src => "images/asterisk.png", :width => "154"}/
-            %p
-              %img#logo{:alt => "Logo_caps", :height => "14", :src => "images/logo_caps.png", :width => "98"}/
-            %p.login_alert Срок вашего сеанса истёк, пожалуйста войдите в систему вновь.
-            %form#user_new.user_new{"accept-charset" => "UTF-8", :action => "users/sign_in", :method => "post"}
-              %div{:style => "margin:0;padding:0;display:inline"}
-                %input{:name => "utf8", :type => "hidden", :value => "&#x2713;"}/
-                %input{:name => "authenticity_token", :type => "hidden", :value => "fHvYJ+py+uH6NyPrtzYQMlZOwaQ5bbddoOPRw/PiDjQ="}/
-              %p
-                %label{:for => "user_username"} Имя пользователя
-                %input#user_username{:name => "user[username]", :size => "30", :tabindex => "1", :type => "text"}/
-              %br/
-              %p
-                %label{:for => "user_password"} Пароль
-                %input#user_password.input-xlarge{:name => "user[password]", :size => "30", :tabindex => "2", :type => "password", :value => ""}/
-                %a#forgot_password_link{:href => "users/password/new", :tabindex => "5"} Забыли пароль?
-              %br/
-              %p#controls
-                %span#remember_me
-                  %input{:name => "user[remember_me]", :type => "hidden", :value => "0"}/
-                  %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
-                  %label{:for => "user_remember_me"} Запомнить
-                %input#user_submit{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
-              %br/
-              %br/
-              %br/
-              %br/
-              %a{:href => "users/sign_up"} Регистрация
+    .awbody
+      .awsite
+        .awsidebar
+          %img.logo{:alt => "KVAZAR", :src => "images/kvazar.png"}/
+          .sidcon
+            %p Историю эту уже начали забывать, хотя находились горожане, которые время от времени рассказывали ее вновь прибывшим в город посетителям.
+            %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
+        .awcont
+          %form#user_new.user_new{"accept-charset" => "UTF-8", :action => "users/sign_in", :method => "post", :style => "text-align:center;"}
+            .awstrok.span6
+              //%label логин
+              %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
+            .awstrok.span6
+              //%label пароль
+              %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
+            .awstrok.span6
+              %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
+              %span{:for => "user_remember_me"} Запомнить
+              %a#forgot_password_link{:href => "users/password/new", :tabindex => "5"} Забыли пароль?
+              %input#user_submit.btn.primary{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
+          .soc.span6
+            %p Войти с помощью социальной сети
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью Facebook", :src => "images/Facebook-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью Twitter", :src => "images/Twitter-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью Вконтакте", :src => "images/Vkontakte-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью Одноклассники", :src => "images/Odnoklassniki-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью Яндекс", :src => "images/r-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью mail", :src => "images/mail-ico.png"}/
+            %a{:href => "#"}
+              %img{:alt => "войти с помощью google", :src => "images/google-ico.png"}/
+            %br/
+            %br/
+            %a{:href => "users/sign_up"} Регистрация
     %footer
       .container
         %ul#footer_nav
           %li
-            %a{:href => "http://twitter.com/joindiaspora"} @joindiaspora
+            %a{:href => "#"} RSS
           %li
-            %a{:href => "https://github.com/diaspora/diaspora"} github
+            %a{:href => "#"} контакты
           %li
-            %a{:href => "http://blog.joindiaspora.com"} блог
+            %a{:href => "#"} карта сайта
           %li
-            %a{:href => "http://f.ua:3000/source.tar.gz"} код
+            %a{:href => "#"} главная
           %li
-            %a{:href => "https://github.com/diaspora/diaspora/wiki/Changelog"} что нового?
-          %li
-        %img{:alt => "Powered_by_diaspora", :height => "11px", :src => "images/powered_by_diaspora.png", :width => "145px"}/
+        %img{:alt => "KVAZAR", :height => "30px", :src => "images/kvazar.png"}/
