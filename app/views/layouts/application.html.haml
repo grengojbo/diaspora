@@ -20,9 +20,9 @@
     / Social Media Icons are by Paul Robert Lloyd @ http://paulrobertlloyd.com/2009/06/social_media_icons
 
     / bootstrap/blueprint switch
-    - if @aspect == :getting_started || @page == :logged_out  || @page == :sign_in ||
+    - if @aspect == :getting_started || @page == :logged_out  || @page == :sign_in
       -#= stylesheet_link_tag "bootstrap.min.css"
-    - elsif !current_user
+      -# elsif !current_user
       = stylesheet_link_tag 'compass_bootstrap.css', :media => 'screen, projection'
     - else
       = stylesheet_link_tag "blueprint/screen", :media => 'screen'
