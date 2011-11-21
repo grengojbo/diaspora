@@ -774,7 +774,7 @@ da:
       viewable_to_anyone: "Dette indlæg er synlig for alle på internettet"
   status_messages:
     create:
-      success: "%{names} nævnet med succes"
+      success: "%{names} nævnt med succes"
     destroy:
       failure: "Kunne ikke slette post."
     helper:
@@ -913,7 +913,7 @@ da:
     privacy_settings:
       ignored_users: "Ignorerede brugere"
       stop_ignoring: "Hold op med at ignorere"
-      title: "Privatlivsindstillinger"
+      title: "Privatliv"
     public:
       does_not_exist: "Brugeren %{username} findes ikke!"
     update:
