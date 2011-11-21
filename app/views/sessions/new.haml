@@ -13,47 +13,47 @@
     footer{ position: absolute; bottom: 6px; }
 
 
-.awbody
-  .awsite
-    .awsidebar
-      = image_tag('kvazar.png', :id => 'logo')
-      .sidcon
-        %p Историю эту уже начали забывать, хотя находились горожане, которые время от времени рассказывали ее вновь прибывшим в город посетителям.
-        %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
 
-    .awcont
+.awsite
+  .awsidebar
+    = image_tag('kvazar.png', :id => 'logo')
+    .sidcon
+      %p Историю эту уже начали забывать, хотя находились горожане, которые время от времени рассказывали ее вновь прибывшим в город посетителям.
+      %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
 
-      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  .awcont
 
-        .awstrok.span6
-          %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
-        .awstrok.span6
-          %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
-        .awstrok.span6
-          %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
-          %span{:for => "user_remember_me"} Запомнить
-          %a#forgot_password_link{:href => "users/password/new", :tabindex => "5"} Забыли пароль?
-          %input#user_submit.btn.primary{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
-      .soc.span6
-        %p Войти с помощью социальной сети
-        %a{:href => "#"}
-          = image_tag('Facebook-ico.png')
-        %a{:href => "#"}
-          = image_tag('Twitter-ico.png')
-        %a{:href => "#"}
-          = image_tag('Vkontakte-ico.png')
-        %a{:href => "#"}
-          = image_tag('Odnoklassniki-ico.png')
-        %a{:href => "#"}
-          = image_tag('r-ico.png')
-        %a{:href => "#"}
-          = image_tag('mail-ico.png')
-        %a{:href => "#"}
-          = image_tag('google-ico.png')
-        %br/
-        %br/
-        %a{:href => "sign_up"} Регистрация
+      .awstrok.span6
+        %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
+      .awstrok.span6
+        %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
+      .awstrok.span6
+        %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
+        %span{:for => "user_remember_me"} Запомнить
+        %a#forgot_password_link{:href => "users/password/new", :tabindex => "5"} Забыли пароль?
+        %input#user_submit.btn.primary{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
+
+    .soc.span6
+      %p Войти с помощью социальной сети
+      %a{:href => "#"}
+        = image_tag('Facebook-ico.png')
+      %a{:href => "#"}
+        = image_tag('Twitter-ico.png')
+      %a{:href => "#"}
+        = image_tag('Vkontakte-ico.png')
+      %a{:href => "#"}
+        = image_tag('Odnoklassniki-ico.png')
+      %a{:href => "#"}
+        = image_tag('r-ico.png')
+      %a{:href => "#"}
+        = image_tag('mail-ico.png')
+      %a{:href => "#"}
+        = image_tag('google-ico.png')
+      %br/
+      %br/
+      %a{:href => "sign_up"} Регистрация
 
 
 
