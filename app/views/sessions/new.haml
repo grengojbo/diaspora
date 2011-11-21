@@ -23,7 +23,7 @@
 
   .awcont
 
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    %form#user_new.user_new{"accept-charset" => "UTF-8", :action => "users/sign_in", :method => "post", :style => "text-align:center;"}
 
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
