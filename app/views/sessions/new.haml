@@ -23,7 +23,7 @@
 
   .awcont
 
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :style => "text-align:center;") do |f|
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
