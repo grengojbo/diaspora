@@ -32,7 +32,7 @@
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
       .awstrok.span6
         %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
-        - if display_password_reset_link?
+        //- if display_password_reset_link?
           //= link_to t('devise.shared.links.forgot_your_password'), new_password_path(resource_name), :id => "forgot_password_link", :tabindex => 5
       .awstrok.span6
         %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
