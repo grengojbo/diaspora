@@ -59,7 +59,7 @@ body {
   float:left;
   padding-top: 40px;
 }
-.awbody, .container {
+.awbody {
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -70,6 +70,9 @@ body {
   background-position: center center;
   background-image: url(../images/bgfon03.jpg);
   color:#eee;
+}
+.container {
+  width:100%;
 }
 .awsite {
   width: 1100px;
