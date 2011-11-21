@@ -24,11 +24,31 @@
   .awcont
 
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %p
+        = image_tag('logo_caps.png', :id => 'logo', :width => 98, :height => 14)
 
+      - flash.each do |name, msg|
+        %p{:class => "login_#{name}"}= msg
+
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+
+        .awstrok.span6
+          = f.text_field :username, :tabindex => 1, :value => prefilled_username, :placeholder => "введите логин"
+        %br
+
+        %p
+          = f.password_field :password, :tabindex => 2, :placeholder => "введите пароль"
+
+          - if display_password_reset_link?
+            = link_to t('devise.shared.links.forgot_your_password'), new_password_path(resource_name), :id => "forgot_password_link", :tabindex => 5
+
+        %br
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
       .awstrok.span6
         %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
+        - if display_password_reset_link?
+          = link_to t('devise.shared.links.forgot_your_password'), new_password_path(resource_name), :id => "forgot_password_link", :tabindex => 5
       .awstrok.span6
         %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
         %span{:for => "user_remember_me"} Запомнить
