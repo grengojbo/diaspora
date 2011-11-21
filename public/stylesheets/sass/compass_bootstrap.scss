@@ -143,40 +143,40 @@ form {
     width:32px;
   }
 }
-/*footer {*/
-  /*width: 100%;*/
-  /*left:0;*/
-  /*bottom: 0;*/
-  /*color: #999;*/
+footer {
+  width: 100%;
+  left:0;
+  bottom: 0;
+  color: #999;
 
-  /*.container {*/
-    /*margin-top:4em;*/
-    /*padding:0;*/
-    /*padding-top:0.5em;*/
+  .container {
+    margin-top:4em;
+    padding:0;
+    padding-top:0.5em;
     /*border-top:1px solid #ddd;*/
     /*background-color:#666;*/
-  /*}*/
-  /*img {*/
-    /*position: relative;*/
-    /*top: 2px;*/
-  /*}*/
-  /*ul {*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*display: inline-block;*/
-    /*float: right;*/
-    /*li {*/
-      /*display: inline;*/
-      /*margin-right: 1em;*/
-      /*last-child {*/
-        /*margin: 0;*/
-      /*}*/
-    /*}*/
-    /*a {*/
-      /*color: #777;*/
-    /*}*/
-  /*}*/
-/*}*/
+  }
+  img {
+    position: relative;
+    top: 2px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    li {
+      display: inline;
+      margin-right: 1em;
+      last-child {
+        margin: 0;
+      }
+    }
+    a {
+      color: #777;
+    }
+  }
+}
 .awleft {
   float:left;
 }
