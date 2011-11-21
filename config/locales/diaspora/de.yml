@@ -493,7 +493,7 @@ de:
       people_on_pod_are_aware_of: "Leute auf dem Pod wissen von"
       results_for: "Ergebnisse für %{params}"
     index:
-      couldnt_find_them_send_invite: "Konntest du die gesuchte Person nicht finden? Schicke eine Einladung!"
+      couldnt_find_them_send_invite: "Konntest du die gesuchte Person nicht finden? Verschicke doch eine Einladung!"
       looking_for: "Suchst du mit %{tag_link} getaggte Beiträge?"
       no_one_found: "… und niemand wurde gefunden."
       no_results: "Hey! Du musst nach etwas suchen."
@@ -661,7 +661,7 @@ de:
         two: "%{count} mal weitergesagt"
         zero: "Weitersagen"
       reshare_confirmation: "%{author}s Beitrag weitersagen?"
-      reshare_original: "Original weitersagen"
+      reshare_original: "Ursprünglichen Beitrag weitersagen"
       reshared_via: "weitergesagt durch"
       show_original: "Original anzeigen"
   search: "Suche"
@@ -823,7 +823,7 @@ de:
     recently: "zuletzt:"
     tags:
       contacts_title: "Personen, die diesen Tag nutzen"
-      tag_prefill_text: "The thing about %{tag_name} is... "
+      tag_prefill_text: "Das Interessante an %{tag_name} ist, dass …"
       title: "Getaggte Beiträge: %{tags}"
   tag_followings:
     create:
@@ -844,14 +844,14 @@ de:
   tokens:
     show:
       connect_to_cubbies: "Mit Cubbi.es verbinden"
-      connecting_is_simple: "Dein Diaspora-Konto mit Cubbi.es zu verbinden ist ganz einfach! Trage deine Diaspora-ID (<b>%{diaspora_id}</b>) auf der Cubbi.es-<a href='%{href_link}'>Einstellungsseite</a> ein und bestätige!"
-      daniels_account: "Daniels Diaspora Konto"
+      connecting_is_simple: "Dein Diaspora-Konto mit Cubbi.es zu verbinden ist ganz leicht! Trage einfach deine Diaspora-ID (<b>%{diaspora_id}</b>) in der Cubbi.es-<a href='%{href_link}'>Einstellungsseite</a> ein und klicke auf »Bestätigen«!"
+      daniels_account: "Daniels Diaspora-Konto"
       log_in_with_diaspora_is_comming: "Schon bald wirst du in der Lage sein, eine Verbindung zu einer neuen Anwendung herzustellen, ohne ein seperates Konto neben deinem Konto auf Diaspora anzulegen."
       love_to_try: "Es wäre toll, wenn du es ausprobieren würdest."
       making_the_connection: "Die Verbindung herstellen"
-      screenshot_explanation: "%{link1}. Dieses \"Cubby\" ist verlinkt auf %{link2}."
+      screenshot_explanation: "%{link1}. Dieses »Cubby« ist mit %{link2} verknüpft."
       sign_up_today: "Jetzt registrieren!"
-      typical_userpage: "Eine typische cubbi.es Benutzerseite"
+      typical_userpage: "Eine typische cubbi.es-Benutzerseite"
       via: "(via %{link})"
       what_is_cubbies: "Cubbi.es ist die erste Diaspora-Anwendung der Welt und ist auch die ideale Möglichkeit online Fotos zu sammeln."
   undo: "Rückgängig machen?"
