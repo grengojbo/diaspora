@@ -81,7 +81,7 @@ sl:
       aspect_list_is_visible: "seznam pogledov je viden drugim stikom pogleda"
       confirm_remove_aspect: "Ali ste prepričani, da bi radi izbrisali ta pogled?"
       done: "Končano"
-      make_aspect_list_visible: "označi seznam pogledov kot viden?"
+      make_aspect_list_visible: "stiki v tem pogledu naj bodo vidni med sabo?"
       remove_aspect: "Izbriši ta pogled"
       rename: "preimenuj"
       update: "posodobi"
@@ -140,8 +140,8 @@ sl:
       create: "Ustvari"
       name: "Ime (vidno samo tebi)"
     no_contacts_message:
-      community_spotlight: "vsebina skupnosti"
-      or_spotlight: "Ali pa lahko delite z %{link}"
+      community_spotlight: "vsebino skupnosti"
+      or_spotlight: "Lahko pa delite tudi z %{link}"
       try_adding_some_more_contacts: "Poiščete ali povabite lahko več stikov."
       you_should_add_some_more_contacts: "Lahko bi dodali še kakšno osebo!"
     no_posts_message:

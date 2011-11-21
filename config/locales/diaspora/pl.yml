@@ -650,19 +650,19 @@ pl:
   reshares:
     comment_email_subject: "%{resharer} podzieli@{m:ł|f:ła|n:ło} się z innymi wpisem %{author}"
     create:
-      failure: "Wystąpił błąd podczas ponownego udostępniania tego wpisu."
+      failure: "Przekazywanie dalej nie powiodło się."
     reshare:
       deleted: "Oryginał został usunięty przez autora."
       reshare:
         few: "Przekazano dalej: %{count}"
         many: "Przekazano dalej: %{count}"
         one: "Przekazano dalej: 1"
-        other: "%{count} ponowne udostępnienia"
+        other: "Przekazano dalej: %{count}"
         two: "Przekazano dalej: %{count}"
-        zero: "Ponownie udostępnij"
+        zero: "Przekaż dalej"
       reshare_confirmation: "Przekazać dalej wpis użytkownika %{author}?"
       reshare_original: "Przekaż dalej oryginał"
-      reshared_via: "Ponownie udostępniony przez"
+      reshared_via: "Przekazano dalej przez "
       show_original: "Wyświetl oryginał"
   search: "Znajdź"
   services:
