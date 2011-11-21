@@ -100,11 +100,11 @@
     %header{:class=>('landing' unless current_user)}
       = render 'layouts/header'
 
-    .awbody{:style=> "#{yield(:break_the_mold)}"}
+    .container{:style=> "#{yield(:break_the_mold)}"}
       - if @aspsect == :getting_started || @page == :logged_out
         = yield
       - else
-        .span-24.last{:style=> "#{yield(:break_the_mold)}"}
+        .awbody{:style=> "#{yield(:break_the_mold)}"}
           = yield
 
     %footer
