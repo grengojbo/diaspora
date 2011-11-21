@@ -30,14 +30,6 @@
 
       = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
-        .awstrok.span6
-          = f.text_field :username, :tabindex => 1, :value => prefilled_username, :placeholder => "введите логин"
-        %br
-
-        %p
-          = f.password_field :password, :tabindex => 2, :placeholder => "введите пароль"
-
-        %br
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
       .awstrok.span6
