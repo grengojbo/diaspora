@@ -21,9 +21,9 @@
       %p Историю эту уже начали забывать, хотя находились горожане, которые время от времени рассказывали ее вновь прибывшим в город посетителям.
       %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
 
-  .awcont#login
+  .awcont
 
-    %form#user_new.user_new{"accept-charset" => "UTF-8", :action => "users/sign_in", :method => "post", :style => "text-align:center;"}
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :style => "text-align:center;") do |f|
 
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
