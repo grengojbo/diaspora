@@ -26,47 +26,39 @@
       = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
         .awstrok.span6
-          = f.text_field :username, :tabindex => 1, :value => prefilled_username, :placeholder => "введите логин"
+          %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
+        .awstrok.span6
+          %input.span5{:name => "user[password]", :type => "password", :placeholder => "введите пароль"}
+        .awstrok.span6
+          %input#user_remember_me{:name => "user[remember_me]", :tabindex => "3", :type => "checkbox", :value => "1"}/
+          %span{:for => "user_remember_me"} Запомнить
+          %a#forgot_password_link{:href => "users/password/new", :tabindex => "5"} Забыли пароль?
+          %input#user_submit.btn.primary{:name => "commit", :tabindex => "4", :type => "submit", :value => "Войти"}/
+
+      .soc.span6
+        %p Войти с помощью социальной сети
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью Facebook", :src => "images/Facebook-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью Twitter", :src => "images/Twitter-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью Вконтакте", :src => "images/Vkontakte-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью Одноклассники", :src => "images/Odnoklassniki-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью Яндекс", :src => "images/r-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью mail", :src => "images/mail-ico.png"}/
+        %a{:href => "#"}
+          %img{:alt => "войти с помощью google", :src => "images/google-ico.png"}/
+        %br/
+        %br/
+        %a{:href => "sign_up"} Регистрация
+      - if display_registration_link?
         %br
-
-        .awstrok.span6
-          = f.password_field :password, :tabindex => 2, :placeholder => "введите пароль"
-        .awstrok.span6
-          - if display_password_reset_link?
-            = link_to t('devise.shared.links.forgot_your_password'), new_password_path(resource_name), :id => "forgot_password_link", :tabindex => 5
-
-
-        %p#controls
-          %input#remember_me
-            - if devise_mapping.rememberable?
-              = f.check_box :remember_me, :tabindex => 3
-              = f.label :remember_me, t('devise.sessions.new.remember_me')
-          = f.submit t('devise.sessions.new.sign_in'), :tabindex => 4
-
-        .soc.span6
-          %p Войти с помощью социальной сети
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью Facebook", :src => "images/Facebook-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью Twitter", :src => "images/Twitter-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью Вконтакте", :src => "images/Vkontakte-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью Одноклассники", :src => "images/Odnoklassniki-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью Яндекс", :src => "images/r-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью mail", :src => "images/mail-ico.png"}/
-          %a{:href => "#"}
-            %img{:alt => "войти с помощью google", :src => "images/google-ico.png"}/
-          %br/
-          %br/
-          %a{:href => "sign_up"} Регистрация
-        - if display_registration_link?
-          %br
-          %br
-          %br
-          %br
-          = link_to t('devise.shared.links.sign_up'), new_registration_path(resource_name)
+        %br
+        %br
+        %br
+        = link_to t('devise.shared.links.sign_up'), new_registration_path(resource_name)
 
 
