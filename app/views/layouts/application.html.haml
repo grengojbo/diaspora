@@ -103,7 +103,7 @@
     %header{:class=>('landing' unless current_user)}
       = render 'layouts/header'
 
-    .container{:style=> "#{yield(:break_the_mold)}"}
+    .awbody{:style=> "#{yield(:break_the_mold)}"}
       - if @aspsect == :getting_started || @page == :logged_out
         = yield
       - else
@@ -111,7 +111,7 @@
           = yield
 
     %footer
-      .container
+      .awbody
         %ul#footer_nav
           %li= link_to 'RSS', "#"
           %li= link_to t('layouts.header.contact'), "/contact.html"
