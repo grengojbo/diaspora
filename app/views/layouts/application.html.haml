@@ -94,16 +94,16 @@
           .message
             = msg
 
-    - unless @landing_page
-      %a{:id=>"back-to-top", :title=>"Back to top", :href=>"#"}
-        &#8679;
+    //- unless @landing_page
+    //  %a{:id=>"back-to-top", :title=>"Back to top", :href=>"#"}
+    //    &#8679;
 
       #notifications
 
     %header{:class=>('landing' unless current_user)}
       = render 'layouts/header'
 
-    .awbody{:style=> "#{yield(:break_the_mold)}"}
+    .container{:style=> "#{yield(:break_the_mold)}"}
       - if @aspsect == :getting_started || @page == :logged_out
         = yield
       - else
@@ -111,7 +111,7 @@
           = yield
 
     %footer
-      .awbody
+      .container
         %ul#footer_nav
           %li= link_to 'RSS', "#"
           %li= link_to t('layouts.header.contact'), "/contact.html"
