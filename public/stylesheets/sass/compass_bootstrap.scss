@@ -111,6 +111,11 @@ form {
 .center {
   align:center;
 }
+field_with_errors {
+  .message {
+    float:right;
+  }
+}
 .awstrok {
   float:right;
   margin-bottom:5px;
