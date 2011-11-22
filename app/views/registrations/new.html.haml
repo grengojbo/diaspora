@@ -29,12 +29,12 @@
           = f.email_field :email, :title => t('registrations.new.enter_email'), :placeholder => t('email')
         .awstrok.span6
           %b
-            = t('password')
-          = f.password_field :password, :title => t('registrations.new.enter_password')
+            -#= t('password')
+          = f.password_field :password, :title => t('registrations.new.enter_password'), :placeholder => t('password')
         .awstrok.span6
           %b
-            = t('password_confirmation')
-          = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again')
+            -#= t('password_confirmation')
+          = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again'), :placeholder => t('password_confirmation')
 
         .submit_field
           = f.submit t('registrations.new.create_my_account'), :class => 'in_aspects btn primary'
