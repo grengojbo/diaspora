@@ -27,8 +27,10 @@
 
       .awstrok.span6
         - flash.each do |name, msg|
-          %p{:class => "login_#{name} alert-message warning"}= msg
+          .alert-message.warning
             %a{:class => "close", :href => "#"} x
+            %p{:class => "login_#{name}"}= msg
+
 
       .awstrok.span6
         %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
