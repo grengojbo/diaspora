@@ -12,6 +12,8 @@
 
   .awcont
     = form_for(resource, :as => resource_name, :html => {:class => 'new_user_form'}, :url => registration_path(resource_name), :validate => true) do |f|
+      .awstrok.span6
+        %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
       %fieldset
         .clearfix
           %b
