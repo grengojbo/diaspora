@@ -17,26 +17,26 @@
       -#  %span.host_uri
       -#    = "@#{AppConfig[:pod_uri].host}"
       %fieldset
-        .awstrok.span7.clearfix
+        .clearfix
           -#%b
             -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => t('username')
           -#%span.host_uri
           -#  = "@#{AppConfig[:pod_uri].host}"
-        .awstrok.span7
+        .clearfix
           -#%b
             -#= t('email')
           = f.email_field :email, :title => t('registrations.new.enter_email'), :placeholder => t('email')
-        .awstrok.span7
+        .clearfix
           -#%b
             -#= t('password')
           = f.password_field :password, :title => t('registrations.new.enter_password'), :placeholder => t('password')
-        .awstrok.span7
+        .clearfix
           -#%b
             -#= t('password_confirmation')
           = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again'), :placeholder => t('password_confirmation')
 
-        .awstrok.span7
+        .clearfix
           = f.submit t('registrations.new.create_my_account'), :class => 'in_aspects btn primary'
   .foot
 
