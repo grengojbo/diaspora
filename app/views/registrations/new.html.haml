@@ -20,13 +20,13 @@
         .awstrok.span6
           %b
             -#= t('username')
-          = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => "введите логин"
+          = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => t('username')
           %span.host_uri
             = "@#{AppConfig[:pod_uri].host}"
         .awstrok.span6
           %b
-            = t('email')
-          = f.email_field :email, :title => t('registrations.new.enter_email')
+            -#= t('email')
+          = f.email_field :email, :title => t('registrations.new.enter_email'), :placeholder => t('email')
         .awstrok.span6
           %b
             = t('password')
