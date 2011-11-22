@@ -25,7 +25,7 @@
 
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
-      .awstrok.span6
+      .awstrok.span6{:style => "align:center;"}
         - flash.each do |name, msg|
           .alert-message.error
             %a{:class => "close", :href => "sign_in"} x
