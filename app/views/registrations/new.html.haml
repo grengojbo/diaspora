@@ -17,7 +17,7 @@
         %span.host_uri
           = "@#{AppConfig[:pod_uri].host}"
       %fieldset
-        .clearfix
+        .awstrok.span6
           %b
             -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => "введите логин"
