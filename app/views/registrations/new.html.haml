@@ -18,6 +18,8 @@
       -#    = "@#{AppConfig[:pod_uri].host}"
       %fieldset.center
         .clearfix
+          %input.span5{:name => "user[username]", :title => t('registrations.new.enter_username'), :type => "text", :placeholder => t('username')}
+        .clearfix
           -#%b
             -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => t('username')
