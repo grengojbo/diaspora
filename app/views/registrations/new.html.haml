@@ -20,7 +20,7 @@
         .clearfix
           %b
             -#= t('username')
-          = f.span5 :username, :title => t('registrations.new.enter_username'), :placeholder => "введите логин"
+          = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => "введите логин"
           %span.host_uri
             = "@#{AppConfig[:pod_uri].host}"
         .clearfix
