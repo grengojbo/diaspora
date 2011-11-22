@@ -13,11 +13,11 @@
   .awcont
     = form_for(resource, :as => resource_name, :html => {:class => 'new_user_form'}, :url => registration_path(resource_name), :validate => true) do |f|
       .awstrok.span6
-        %input.span5{:name => "user[username]", :data-original-title => "Выберите имя пользователя (разрешены только латинские буквы, цифры и подчеркивание)", :type => "text", :placeholder => "введите логин"}
+        %input.span5{:name => "user[username]", :type => "text", :placeholder => "введите логин"}
       %fieldset
         .clearfix
           %b
-            = t('username')
+            -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username')
           %span.host_uri
             = "@#{AppConfig[:pod_uri].host}"
