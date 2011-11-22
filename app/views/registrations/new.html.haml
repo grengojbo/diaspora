@@ -2,20 +2,12 @@
 = javascript_include_tag 'vendor/jquery.ghostInput'
 
 = javascript_tag "Diaspora.Page = 'InvitationsEdit';"
-.span-7.append-1.prepend-3
-  начало
-  %br
-  %br
-  %br
-  %br
-  %h1
-    = t('welcome')
-  %h3.accept_invitation_text
-    = t('.sign_up_message')
-  - flash.each do |name, msg|
-    %p{:class => "login_#{name}"}= msg
+.awsidebar
+  = image_tag('kvazar.png', :id => 'logo')
+  .sidcon
+    %p Историю эту уже начали забывать, хотя находились горожане, которые время от времени рассказывали ее вновь прибывшим в город посетителям.
+    %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
 
-  = image_tag 'kvazar.png', :style => "margin-left:-50px;"
 
 .span-10
   %br
