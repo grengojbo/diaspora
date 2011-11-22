@@ -1,5 +1,5 @@
 = javascript_include_tag "validation"
-= javascript_include_tag 'vendor/jquery.ghostInput'
+-#= javascript_include_tag 'vendor/jquery.ghostInput'
 
 = javascript_tag "Diaspora.Page = 'InvitationsEdit';"
 .awsite
@@ -18,21 +18,21 @@
       -#    = "@#{AppConfig[:pod_uri].host}"
       %fieldset
         .awstrok.span7
-          %b
+          -#%b
             -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => t('username')
           %span.host_uri
-            -#= "@#{AppConfig[:pod_uri].host}"
+            = "@#{AppConfig[:pod_uri].host}"
         .awstrok.span7
-          %b
+          -#%b
             -#= t('email')
           = f.email_field :email, :title => t('registrations.new.enter_email'), :placeholder => t('email')
         .awstrok.span7
-          %b
+          -#%b
             -#= t('password')
           = f.password_field :password, :title => t('registrations.new.enter_password'), :placeholder => t('password')
         .awstrok.span7
-          %b
+          -#%b
             -#= t('password_confirmation')
           = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again'), :placeholder => t('password_confirmation')
 
