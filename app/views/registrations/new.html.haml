@@ -23,15 +23,15 @@
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => "введите логин"
           %span.host_uri
             = "@#{AppConfig[:pod_uri].host}"
-        .clearfix
+        .awstrok.span6
           %b
             = t('email')
           = f.email_field :email, :title => t('registrations.new.enter_email')
-        .clearfix
+        .awstrok.span6
           %b
             = t('password')
           = f.password_field :password, :title => t('registrations.new.enter_password')
-        .clearfix
+        .awstrok.span6
           %b
             = t('password_confirmation')
           = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again')
