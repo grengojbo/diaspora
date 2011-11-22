@@ -10,33 +10,29 @@
       %p Легенда обрастала подробностями и уже совсем не напоминала произошедшее в действительности событие. И, тем не менее, ни один человек не решался заикнуться о ней с наступлением темноты.
 
 
-.span-10
-  %br
-  %br
-  %br
-  %br
-  = form_for(resource, :as => resource_name, :html => {:class => 'new_user_form'}, :url => registration_path(resource_name), :validate => true) do |f|
-    %fieldset
-      .clearfix
-        %b
-          = t('username')
-        = f.text_field :username, :title => t('registrations.new.enter_username')
-        %span.host_uri
-          = "@#{AppConfig[:pod_uri].host}"
-      .clearfix
-        %b
-          = t('email')
-        = f.email_field :email, :title => t('registrations.new.enter_email')
-      .clearfix
-        %b
-          = t('password')
-        = f.password_field :password, :title => t('registrations.new.enter_password') 
-      .clearfix
-        %b
-          = t('password_confirmation')
-        = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again') 
+  .awcont
+    = form_for(resource, :as => resource_name, :html => {:class => 'new_user_form'}, :url => registration_path(resource_name), :validate => true) do |f|
+      %fieldset
+        .clearfix
+          %b
+            = t('username')
+          = f.text_field :username, :title => t('registrations.new.enter_username')
+          %span.host_uri
+            = "@#{AppConfig[:pod_uri].host}"
+        .clearfix
+          %b
+            = t('email')
+          = f.email_field :email, :title => t('registrations.new.enter_email')
+        .clearfix
+          %b
+            = t('password')
+          = f.password_field :password, :title => t('registrations.new.enter_password')
+        .clearfix
+          %b
+            = t('password_confirmation')
+          = f.password_field :password_confirmation, :title => t('registrations.new.enter_password_again')
 
-      .submit_field
-        = f.submit t('registrations.new.create_my_account'), :class => 'in_aspects'
+        .submit_field
+          = f.submit t('registrations.new.create_my_account'), :class => 'in_aspects'
 
 
