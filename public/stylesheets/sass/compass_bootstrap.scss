@@ -120,6 +120,7 @@ form.new_user_form {
   div {
     margin-left:0px;
     width:400px;
+    heighr:50px;
   }
   input[type="button"], input[type="reset"], input[type="submit"] {
     width:220px;
@@ -131,7 +132,7 @@ form.new_user_form {
 .field_with_errors {
   label {
     float:right;
-    width: 170px;
+    width: 135px;
     color: #eee;
   }
 }
