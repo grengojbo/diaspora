@@ -112,6 +112,9 @@ form {
     /*text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.8);*/
   }
 }
+.bbt {
+  width:225px;
+}
 form.new_user_form {
   text-align:left;
   div {
@@ -120,9 +123,7 @@ form.new_user_form {
   }
   input {
     width:220px;
-    .bbt {
-      width:225px;
-    }
+
   }
 }
 .center {
