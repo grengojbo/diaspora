@@ -121,9 +121,8 @@ form.new_user_form {
     margin-left:0px;
     width:400px;
   }
-  input {
-    /*width:220px;*/
-
+  input[type="button"] {
+    width:220px;
   }
 }
 .center {
