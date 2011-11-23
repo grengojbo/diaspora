@@ -121,7 +121,7 @@ form.new_user_form {
     margin-left:0px;
     width:400px;
   }
-  input[type="button"] {
+  input[type="button"], input[type="reset"], input[type="submit"] {
     width:220px;
   }
 }
