@@ -119,7 +119,10 @@ form.new_user_form {
     width:400px;
   }
   input {
-    width:225px;
+    width:220px;
+    .bbt {
+      width:225px;
+    }
   }
 }
 .center {
