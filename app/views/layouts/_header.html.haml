@@ -21,6 +21,7 @@
         %li= link_to 'github', "https://github.com/diaspora/diaspora"
         %li= link_to t('.blog'), 'http://blog.joindiaspora.com/'
         %li= link_to t('.login'), new_user_session_path, :class => 'login'
+        %li новый пункт
 
   - elsif (current_user || !@landing_page)
     #global_search
