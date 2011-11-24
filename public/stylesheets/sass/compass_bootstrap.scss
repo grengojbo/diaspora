@@ -135,6 +135,7 @@ form.new_user_form {
 }
 .field_with_errors {
   label {
+    clear:both;
     /*float:left;*/
     width: 135px;
     color: #f55;
