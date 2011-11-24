@@ -21,8 +21,8 @@
           -#%b
             -#= t('username')
           = f.text_field :username, :title => t('registrations.new.enter_username'), :placeholder => t('username')
-          %span.host_uri
-            = "@#{AppConfig[:pod_uri].host}"
+          -#%span.host_uri
+          -#  = "@#{AppConfig[:pod_uri].host}"
         .clearfix
           -#%b
             -#= t('email')
